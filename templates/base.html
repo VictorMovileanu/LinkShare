@@ -5,11 +5,74 @@
     <meta charset="UTF-8">
     <title>LinkShare</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-{% block content %}
 
-{% endblock %}
+<header class="header">
+    <nav class="user-nav">
+        <div class="user-nav__quick-links">
+            <a href="#" class="user-nav__link">
+                <svg class="user-nav__icon">
+                    <use xlink:href="{% static 'img/sprite.svg' %}#icon-home"></use>
+                </svg>
+            </a>
+            <a href="#" class="user-nav__link">
+                <svg class="user-nav__icon">
+                    <use xlink:href="{% static 'img/sprite.svg' %}#icon-th"></use>
+                </svg>
+            </a>
+            <a href="#" class="user-nav__link">
+                <svg class="user-nav__icon" viewBox="0 6 100 100">
+                    <use xlink:href="{% static 'img/sprite.svg' %}#icon-envelope-o"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="user-nav__user-control">
+            <svg class="user-nav__icon">
+                <use xlink:href="{% static 'img/sprite.svg' %}#icon-user"></use>
+            </svg>
+        </div>
+    </nav>
+</header>
+<div class="content">
+
+    <nav class="sidebar" id="sidebar">
+        <ul class="side-nav">
+            <li class="side-nav__item"><a href="#" class="side-nav__bookmark">Bookmark 1</a></li>
+            <li class="side-nav__item"><a href="#" class="side-nav__bookmark">Bookmark 2</a></li>
+            <li class="side-nav__item"><a href="#" class="side-nav__bookmark">Bookmark 3</a></li>
+        </ul>
+        <div class="sidebar__toggle">
+            <input type="checkbox" class="sidebar__toggle-checkbox" id="sidebar-toggle">
+            <label for="sidebar-toggle" class="sidebar__toggle-label" onclick="toggleSidebar()">
+                <svg class="sidebar__toggle-off">
+                    <use xlink:href="{% static 'img/sprite.svg' %}#icon-angle-double-left"></use>
+                </svg>
+                <svg class="sidebar__toggle-on">
+                    <use xlink:href="{% static 'img/sprite.svg' %}#icon-angle-double-right"></use>
+                </svg>
+            </label>
+        </div>
+    </nav>
+    <main class="main">
+        {% block main %}
+
+        {% endblock %}
+    </main>
+
+
+</div>
+<div class="add-bookmark">
+    <button class="add-bookmark__button">
+        <svg class="add-bookmark__icon">
+            <use xlink:href="{% static 'img/sprite.svg' %}#icon-plus"></use>
+        </svg>
+    </button>
+</div>
+
+
+<script src="{% static 'js/utils.js' %}"></script>
+
 </body>
 </html>

@@ -4,7 +4,7 @@
   "description": "\"An application to share links and notes\"",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass static/sass/main.scss static/css/style.css -w &",
+    "watch:sass": "node-sass static/sass/main.scss static/css/style.css -w",
     "compile:sass": "node-sass static/sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css static/css/style.css --output-style compressed",

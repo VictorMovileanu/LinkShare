@@ -24,11 +24,6 @@ urlpatterns = [
 ]
 
 # todo
-#  create home page
-#   add svg icons
-#   create top nav
-#   create sidebar with links
-#   create search bar (copy from trillo project)
 #  create categories page
 #   add 6 sample categories
 #   add jscroll or whatever for scroling through the links

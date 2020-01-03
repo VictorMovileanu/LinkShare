@@ -1,0 +1,150 @@
+/////////////////////
+//// USER NAV
+.user-nav {
+  display: flex;
+  padding: 1rem 2rem;
+
+  &__quick-links {
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__user-control {
+    flex: 0 1;
+  }
+
+  &__icon {
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+  }
+}
+
+/////////////////////
+//// ADD BUTTON
+.add-bookmark {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+  }
+
+  &__icon {
+    padding: 1rem 1rem 0.8rem;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+/////////////////////
+//// SIDEBAR
+.sidebar {
+  position: relative;
+  color: var(--color-grey-light-1);
+  transition: all .5s;
+
+  &.closed {
+    flex: 0 0 0;
+
+    .side-nav {
+      display: none;
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    right: -3rem;
+    top: 20px;
+    padding: 2rem 0;
+    background-color: var(--color-grey-dark-2);
+  }
+
+  &__toggle-off,
+  &__toggle-on {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--color-grey-light-1);
+  }
+
+  &__toggle-checkbox {
+    display: none;
+  }
+  &__toggle-checkbox:checked ~ &__toggle-label > &__toggle-off {
+    display: none;
+  }
+  &__toggle-checkbox:checked ~ &__toggle-label > &__toggle-on {
+    display: inline-block;
+  }
+  &__toggle-checkbox:not(:checked) ~ &__toggle-label > &__toggle-off {
+    display: inline-block;
+  }
+  &__toggle-checkbox:not(:checked) ~ &__toggle-label > &__toggle-on {
+    display: none;
+  }
+}
+
+/////////////////////
+//// SIDE-NAV
+.side-nav {
+  list-style: none;
+}
+
+
+/////////////////////////
+/// SEARCH
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 50%;
+    min-width: 10rem;
+    transition: all .3s;
+    margin-right: -3.25rem;
+
+    &:focus {
+      outline: none;
+      width: 60%;
+      background-color: var(--color-grey-light-3);
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
+  }
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
+  }
+  &__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3);
+  }
+}
