@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div>
+        <svg class="search__icon">
+            <use xlink:href="{% static 'img/sprite.svg' %}#icon-plus"></use>
+        </svg>
+    </div>
+{% endblock %}
