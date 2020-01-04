@@ -245,4 +245,52 @@
   &__image {
     width: 100%;
   }
+
+  &__list {
+    list-style: none;
+  }
+}
+
+/////////////////////////
+/// BOOKMARK
+.bookmark {
+  background-color: var(--color-grey-dark-2);
+  padding: 5px;
+  &__main {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    padding: 0 .5rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+  }
+
+  &__secondary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3rem .8rem;
+
+  }
+
+  &__rating-star {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &__views {
+    margin-left: .5rem;
+    color: var(--color-grey-dark-1);
+  }
+
+  &__button {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  &__settings {
+    align-self: flex-end;
+  }
 }
