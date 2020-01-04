@@ -16,8 +16,17 @@
 }
 
 .main {
-  flex: 1 0 85%;
+  width: 100%;
+}
+
+.index-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.categories {
   display: flex;
-  align-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
   justify-content: center;
 }

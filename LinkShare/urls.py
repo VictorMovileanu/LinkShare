@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from LinkShare.views import IndexView
+from LinkShare.views import IndexView, CategoryView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', IndexView.as_view(), name='home')
+    path('', IndexView.as_view(), name='home'),
+    path('categories', CategoryView.as_view(), name='categories')
 ]
 
 # todo
