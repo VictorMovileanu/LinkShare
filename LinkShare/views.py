@@ -5,5 +5,3 @@ class IndexView(TemplateView):
     template_name = 'index.html'
 
 
-class CategoryView(TemplateView):
-    template_name = 'categories.html'

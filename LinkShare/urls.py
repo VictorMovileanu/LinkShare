@@ -16,15 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from LinkShare.views import IndexView, CategoryView
+from LinkShare.views import IndexView
+from bookmarks.views import CategoriesView, CategoryListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='home'),
-    path('categories', CategoryView.as_view(), name='categories')
+    path('categories', CategoriesView.as_view(), name='categories'),
+    path('category/<int:pk>/', CategoryListView.as_view(), name='category')
 ]
 
 # todo
 #  create categories page
-#   create views that serve bookmarks as paginated for each category (1h)
 #   implement infinite scroll with intercooler js (1.5h)

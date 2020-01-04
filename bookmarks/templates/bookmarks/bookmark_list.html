@@ -1,0 +1,35 @@
+{% load static %}
+{% for bookmark in bookmarks %}
+    <li class="category-card__item">
+        <div class="bookmark">
+            <div class="bookmark__main">
+                <img src="{% static 'img/favicon.ico' %}" alt="favicon" class="bookmark__icon">
+                <a href="{{ bookmark.url }}" class="bookmark__title">{{ bookmark.title }}</a>
+            </div>
+            <div class="bookmark__secondary">
+                <span class="bookmark__info">
+                    <svg class="bookmark__rating-star"><use
+                            xlink:href="{% static 'img/sprite.svg' %}#icon-star"></use></svg>
+                    <svg class="bookmark__rating-star"><use
+                            xlink:href="{% static 'img/sprite.svg' %}#icon-star"></use></svg>
+                    <svg class="bookmark__rating-star"><use
+                            xlink:href="{% static 'img/sprite.svg' %}#icon-star"></use></svg>
+                    <svg class="bookmark__rating-star"><use
+                            xlink:href="{% static 'img/sprite.svg' %}#icon-star"></use></svg>
+                    <svg class="bookmark__rating-star"><use
+                            xlink:href="{% static 'img/sprite.svg' %}#icon-star"></use></svg>
+                    <span class="bookmark__views">{{ bookmark.views }} views</span>
+                </span>
+
+                <span class="bookmark__settings">
+                    <svg class="bookmark__button"><use
+                            xlink:href="{% static 'img/sprite.svg' %}#icon-info"></use></svg>
+                    <svg class="bookmark__button"><use
+                            xlink:href="{% static 'img/sprite.svg' %}#icon-pencil"></use></svg>
+                    <svg class="bookmark__button"><use
+                            xlink:href="{% static 'img/sprite.svg' %}#icon-trash-o"></use></svg>
+                </span>
+            </div>
+        </div>
+    </li>
+{% endfor %}

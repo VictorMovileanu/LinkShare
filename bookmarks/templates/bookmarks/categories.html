@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    <div class="categories">
+        {% for category in categories %}
+            <div class="category-card" data-search-url="{# path to category pk #}">
+                <div class="category-card__header">
+                    <div class="category-card__header-overlay"></div>
+                    <button class="category-card__settings-button">
+                        <svg class="category-card__settings-icon">
+                            <use xlink:href="{% static 'img/sprite.svg' %}#icon-cog"></use>
+                        </svg>
+                    </button>
+                    <img src="{% static 'img/django.jpeg' %}" alt="" class="category-card__image">
+                    <div class="category-card__search">
+                        <input type="text" class="category-card__search-input" placeholder="Search bookmarks">
+                    </div>
+                </div>
+                <ul class="category-card__list" ic-get-from="{% url 'category' category.pk %}" ic-trigger-on="load">
+
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
