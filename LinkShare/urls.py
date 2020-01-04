@@ -26,6 +26,5 @@ urlpatterns = [
 
 # todo
 #  create categories page
-#   add 6 sample categories
-#   add jscroll or whatever for scroling through the links
-#   add search inside each category image on hover/click
+#   create views that serve bookmarks as paginated for each category (1h)
+#   implement infinite scroll with intercooler js (1.5h)

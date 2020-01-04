@@ -1,0 +1,6 @@
+[{"model":"bookmarks.category","pk":1,"fields":{"title":"Django"}},
+{"model":"bookmarks.category","pk":2,"fields":{"title":"Advanced"}},
+{"model":"bookmarks.category","pk":3,"fields":{"title":"logistical"}},
+{"model":"bookmarks.category","pk":4,"fields":{"title":"hybrid"}},
+{"model":"bookmarks.category","pk":5,"fields":{"title":"analyzing"}},
+{"model":"bookmarks.category","pk":6,"fields":{"title":"Customizable"}}]
