@@ -248,6 +248,8 @@
 
   &__list {
     list-style: none;
+    height: 20rem;
+    overflow-y: scroll;
   }
 }
 

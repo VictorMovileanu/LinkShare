@@ -3,7 +3,7 @@
 {% block main %}
     <div class="categories">
         {% for category in categories %}
-            <div class="category-card" data-search-url="{# path to category pk #}">
+            <div class="category-card" data-search-url="{% url 'category' category.pk %}">
                 <div class="category-card__header">
                     <div class="category-card__header-overlay"></div>
                     <button class="category-card__settings-button">
@@ -16,8 +16,9 @@
                         <input type="text" class="category-card__search-input" placeholder="Search bookmarks">
                     </div>
                 </div>
-                <ul class="category-card__list" ic-get-from="{% url 'category' category.pk %}" ic-trigger-on="load">
-
+                <ul class="category-card__list">
+                    Loading...
+                    {# loaded via ajax #}
                 </ul>
             </div>
         {% endfor %}

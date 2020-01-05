@@ -185,7 +185,9 @@ html {
   .category-card__image {
     width: 100%; }
   .category-card__list {
-    list-style: none; }
+    list-style: none;
+    height: 20rem;
+    overflow-y: scroll; }
 
 .bookmark {
   background-color: var(--color-grey-dark-2);
