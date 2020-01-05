@@ -1,6 +1,6 @@
 from django.views.generic import ListView, TemplateView
 from elasticsearch import Elasticsearch
-from elasticsearch_dsl import Search
+from elasticsearch_dsl import Search, Q
 
 from bookmarks.models import Bookmark, Category
 
@@ -30,12 +30,25 @@ class BookmarkListView(TemplateView):
 
     def get_context_data(self, **kwargs):
         ctx = super(BookmarkListView, self).get_context_data(**kwargs)
-        s = Search(index='bookmarks-index').query("match", category=self.kwargs.get('pk'))
+
+        # SEARCH
+        s = Search(using=client, index='bookmarks-index').filter("term", category=self.kwargs.get('pk'))
+
+        # QUERY
+        q = self.request.GET.get('q', "")
+        if q:
+            # todo: pagination does not work with query?
+            q = Q("multi_match", query=q, fields=['title'])
+            s = s.query(q)
+
+        # PAGINATION
         try:
             page = int(self.request.GET.get('page', 1))
         except ValueError:
             page = 1
         s = s[self.paginate_by*(page-1):self.paginate_by*page]
+
+        # EXECUTE
         response = s.execute()
         ctx['bookmarks'] = response.hits
         return ctx

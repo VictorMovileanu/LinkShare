@@ -3,7 +3,7 @@
 {% block main %}
     <div class="categories">
         {% for category in categories %}
-            <div class="category-card" data-search-url="{% url 'category' category.pk %}">
+            <div class="category-card" data-search-url="{% url 'category' category.pk %}" data-query="">
                 <div class="category-card__header">
                     <div class="category-card__header-overlay"></div>
                     <button class="category-card__settings-button">

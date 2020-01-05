@@ -6,6 +6,7 @@ connections.create_connection(hosts=['localhost'])
 
 
 class BookmarkIndex(Document):
+    # todo: https://elasticsearch-dsl.readthedocs.io/en/latest/persistence.html
     url = Text()
     title = Text()
     views = Integer()
