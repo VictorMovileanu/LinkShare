@@ -13,6 +13,9 @@ class CategoriesView(ListView):
 
 
 class CategoryListView(ListView):
+    # todo: svg icons are not rendered in chrome
+    #  probably an issue with mimetypes
+    #  try out: https://stackoverflow.com/questions/2312714/can-the-django-dev-server-correctly-serve-svg
     model = Bookmark
     paginate_by = 10
     context_object_name = 'bookmarks'
