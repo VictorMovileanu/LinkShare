@@ -17,13 +17,13 @@ from django.contrib import admin
 from django.urls import path
 
 from LinkShare.views import IndexView
-from bookmarks.views import CategoriesView, CategoryListView
+from bookmarks.views import CategoriesView, CategoryListView, BookmarkListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='home'),
     path('categories', CategoriesView.as_view(), name='categories'),
-    path('category/<int:pk>/', CategoryListView.as_view(), name='category')
+    path('category/<int:pk>/', BookmarkListView.as_view(), name='category')
 ]
 
 # todo
