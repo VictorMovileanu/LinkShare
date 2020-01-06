@@ -124,3 +124,17 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+ES_CONNECTIONS = {
+    'default': {
+        'hosts': ['http://localhost:9200'],
+    }
+}
+
+ES_INDEXES = {
+    'default': [
+        ('bookmarks-index', 'bookmarks.documents.BookmarkIndex'),
+    ]
+}
+
+ES_DEFAULT_BATCH_SIZE = 1000
