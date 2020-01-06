@@ -12,7 +12,7 @@ $(document).ready(function () {
             page += 1;
         });
         $(bookmarkList).scroll(function () {
-            if (this.clientHeight + $(this).scrollTop() >= this.scrollHeight) {
+            if (this.clientHeight + $(this).scrollTop() >= this.scrollHeight) { // todo: add a bottom reached check
                 q = categoryCard.dataset.query;
                 $.get(url + "?page=" + page + "&q=" + q, function (data) {
                     $(bookmarkList).append(data);

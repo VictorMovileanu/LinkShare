@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.views.generic import ListView, TemplateView
 from elasticsearch import Elasticsearch
 from elasticsearch_dsl import Search, Q
@@ -50,5 +51,8 @@ class BookmarkListView(TemplateView):
 
         # EXECUTE
         response = s.execute()
-        ctx['bookmarks'] = response.hits
-        return ctx
+        if response.hits:
+            ctx['bookmarks'] = response.hits
+            return ctx
+        else:
+            raise Http404
