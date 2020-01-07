@@ -13,7 +13,7 @@
                     </button>
                     <img src="{% static 'img/django.jpeg' %}" alt="" class="category-card__image">
                     <div class="category-card__search">
-                        <input type="text" class="category-card__search-input" placeholder="Search bookmarks">
+                        {% include 'partials/search-form.html' %}
                     </div>
                 </div>
                 <ul class="category-card__list">

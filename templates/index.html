@@ -1,14 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block main %}
-    <div class="index-container">
-        <form class="search">
-            <input type="text" class="search__input" placeholder="Search bookmarks">
-            <button class="search__button">
-                <svg class="search__icon">
-                    <use xlink:href="{% static 'img/sprite.svg' %}#icon-search"></use>
-                </svg>
-            </button>
-        </form>
+    <div class="search-container">
+        {% include 'partials/search-form.html' %}
     </div>
 {% endblock %}
