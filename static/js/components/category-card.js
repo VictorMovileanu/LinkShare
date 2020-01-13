@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $(".category-card").map(function () {
         const categoryCard = this;
-        const bookmarkList = $(categoryCard).find(".category-card__list");
+        const bookmarkList = $(categoryCard).find(".category-card__bookmarks-list");
         const url = this.dataset.searchUrl;
         let q = this.dataset.query;  // todo: search for some query parameters concat function
         // todo: urlencode query
@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     $(".category-card__search-input").map(function () {
         const categoryCard = $(this).closest(".category-card");
-        const bookmarkList = $(categoryCard).find(".category-card__list");
+        const bookmarkList = $(categoryCard).find(".category-card__bookmarks-list");
         const url = categoryCard.data("search-url");
         this.addEventListener("keyup", function () {
             $(categoryCard).attr("data-query", this.value);
