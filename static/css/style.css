@@ -159,10 +159,16 @@ html {
     position: relative; }
   .category-card__header:hover > .category-card__search {
     visibility: visible;
-    opacity: 1; }
+    opacity: 1;
+    width: 70%;
+    transition: all .3s ease-out .2s; }
   .category-card__header:hover > .category-card__header-overlay {
     visibility: visible;
     opacity: 0.3; }
+  .category-card__header:hover > .category-card__settings-button {
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s ease-out .2s; }
   .category-card__header-overlay {
     position: absolute;
     top: 0;
@@ -172,11 +178,14 @@ html {
     visibility: hidden;
     opacity: 0;
     background-color: var(--color-grey-light-1);
-    transition: all .3s; }
+    transition: all .3s ease-out; }
   .category-card__settings-button {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-out;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 3px;
+    right: 3px;
     background-color: transparent;
     border: none; }
     .category-card__settings-button:focus {
@@ -187,12 +196,12 @@ html {
   .category-card__search {
     visibility: hidden;
     opacity: 0;
-    transition: all .3s;
+    transition: all .3s ease-out;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%; }
+    width: 0; }
   .category-card__image {
     width: 100%;
     border-top-left-radius: 3px;
