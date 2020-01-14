@@ -1,0 +1,30 @@
+.user-nav {
+  padding: 1rem 2rem;
+
+  &__top {
+    display: flex;
+  }
+
+  &__quick-links {
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__user-control {
+    flex: 0 1;
+  }
+
+  &__icon {
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+  }
+
+  &__search {
+    margin: 0 auto;
+    width: 30%;
+    font-size: 1.4rem;
+  }
+}

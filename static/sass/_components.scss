@@ -1,28 +1,4 @@
 /////////////////////
-//// USER NAV
-.user-nav {
-  display: flex;
-  padding: 1rem 2rem;
-
-  &__quick-links {
-    flex: 1 1;
-    display: flex;
-    justify-content: center;
-  }
-
-  &__user-control {
-    flex: 0 1;
-  }
-
-  &__icon {
-    display: inline-block;
-    height: 5rem;
-    width: 5rem;
-    padding: 1rem;
-  }
-}
-
-/////////////////////
 //// ADD BUTTON
 .add-bookmark {
   position: fixed;

@@ -24,21 +24,6 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
-.user-nav {
-  display: flex;
-  padding: 1rem 2rem; }
-  .user-nav__quick-links {
-    flex: 1 1;
-    display: flex;
-    justify-content: center; }
-  .user-nav__user-control {
-    flex: 0 1; }
-  .user-nav__icon {
-    display: inline-block;
-    height: 5rem;
-    width: 5rem;
-    padding: 1rem; }
-
 .add-bookmark {
   position: fixed;
   bottom: 10px;
@@ -211,8 +196,25 @@ html {
     height: 20rem;
     overflow-y: scroll; }
 
-.header {
-  height: 7rem; }
+.user-nav {
+  padding: 1rem 2rem; }
+  .user-nav__top {
+    display: flex; }
+  .user-nav__quick-links {
+    flex: 1 1;
+    display: flex;
+    justify-content: center; }
+  .user-nav__user-control {
+    flex: 0 1; }
+  .user-nav__icon {
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem; }
+  .user-nav__search {
+    margin: 0 auto;
+    width: 30%;
+    font-size: 1.4rem; }
 
 .content {
   display: flex;

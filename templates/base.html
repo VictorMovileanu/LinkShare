@@ -11,27 +11,32 @@
 
 <header class="header">
     <nav class="user-nav">
-        <div class="user-nav__quick-links">
-            <a href="{% url 'home' %}" class="user-nav__link">
+        <div class="user-nav__top">
+            <div class="user-nav__quick-links">
+                <a href="{% url 'home' %}" class="user-nav__link">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="{% static 'img/sprite.svg' %}#icon-home"></use>
+                    </svg>
+                </a>
+                <a href="{% url 'categories' %}" class="user-nav__link">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="{% static 'img/sprite.svg' %}#icon-th"></use>
+                    </svg>
+                </a>
+                <a href="#" class="user-nav__link">
+                    <svg class="user-nav__icon" viewBox="0 6 100 100">
+                        <use xlink:href="{% static 'img/sprite.svg' %}#icon-envelope-o"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="user-nav__user-control">
                 <svg class="user-nav__icon">
-                    <use xlink:href="{% static 'img/sprite.svg' %}#icon-home"></use>
+                    <use xlink:href="{% static 'img/sprite.svg' %}#icon-user"></use>
                 </svg>
-            </a>
-            <a href="{% url 'categories' %}" class="user-nav__link">
-                <svg class="user-nav__icon">
-                    <use xlink:href="{% static 'img/sprite.svg' %}#icon-th"></use>
-                </svg>
-            </a>
-            <a href="#" class="user-nav__link">
-                <svg class="user-nav__icon" viewBox="0 6 100 100">
-                    <use xlink:href="{% static 'img/sprite.svg' %}#icon-envelope-o"></use>
-                </svg>
-            </a>
+            </div>
         </div>
-        <div class="user-nav__user-control">
-            <svg class="user-nav__icon">
-                <use xlink:href="{% static 'img/sprite.svg' %}#icon-user"></use>
-            </svg>
+        <div class="user-nav__search">
+            {% include 'partials/search-form.html' %}
         </div>
     </nav>
 </header>
@@ -72,7 +77,8 @@
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="{% static 'js/components/sidebar.js' %}"></script>
 <script src="{% static 'js/components/category-card.js' %}"></script>
 </body>
